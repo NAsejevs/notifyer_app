@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
 
 class FetchListAdapter(var context: Context?, var items: ArrayList<FetchItem>) : BaseAdapter() {
@@ -36,12 +37,14 @@ class FetchListAdapter(var context: Context?, var items: ArrayList<FetchItem>) :
             val currentItem = getItem(position) as FetchItem
 
             // get the TextView for item name and item description
-            val textViewItemName = view.findViewById(R.id.text_view_item_name) as TextView
-            val textViewItemDescription = view.findViewById(R.id.text_view_item_description) as TextView
+            val url = view.findViewById(R.id.url) as TextView
+            val header = view.findViewById(R.id.header) as TextView
+            val removeButton = view.findViewById(R.id.remove) as ImageView
 
             //sets the text for item name and item description from the current item object
-            textViewItemName.text = currentItem.title
-            textViewItemDescription.text = currentItem.description
+            url.text = currentItem.url
+            header.text = currentItem.header
+            removeButton.tag = position
         }
 
         // returns the view for the current row

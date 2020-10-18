@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SS.COM Notifyer</string>
     <string name="new_fetch">New Notification</string>
+    <string name="new_notification">New notification</string>
 </resources>

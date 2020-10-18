@@ -23,18 +23,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/text_view_item_name"
+                android:id="@+id/header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Hello NiGGER" />
+                android:text="This is the URL!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
-                android:id="@+id/text_view_item_description"
+                android:id="@+id/url"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="HELLOOOOO" />
+                android:text="This is the header!" />
 
         </LinearLayout>
 
@@ -43,14 +44,27 @@
             android:layout_height="match_parent">
 
             <Switch
-                android:id="@+id/switch1"
+                android:id="@+id/notificationToggle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.216"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.509" />
+
+            <ImageView
+                android:id="@+id/remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickRemoveRetch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/notificationToggle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_delete" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>

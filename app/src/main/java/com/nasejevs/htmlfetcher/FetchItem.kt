@@ -1,3 +1,3 @@
 package com.nasejevs.htmlfetcher
 
-class FetchItem(var title: String, var description: String)
+class FetchItem(var url: String, var header: String = "")
